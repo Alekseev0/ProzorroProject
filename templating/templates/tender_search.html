@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Search">
+
+    </form>
+
+    {% if tender %}
+        {{ tender.hash }}
+    {% endif %}
+
+{% endblock %}
