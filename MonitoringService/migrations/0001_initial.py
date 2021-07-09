@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
             name='UserStat',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('tenders', models.ManyToManyField(to='templating.Tender')),
+                ('tenders', models.ManyToManyField(to='MonitoringService.Tender')),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),

@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from ProzorroPlatform.settings_constants import EMAIL_PASSWORD, DATABASE_PASSWORD, DATABASE_USER
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -37,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'templating',
-    "djcelery_email",
+    'MonitoringService',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -79,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'Shadow0',
+        'USER': DATABASE_USER,
+        'PASSWORD': DATABASE_PASSWORD,
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -131,16 +133,27 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'courseprojectdjango@gmail.com'
-EMAIL_HOST_PASSWORD = 'Django123'
+EMAIL_HOST_PASSWORD = EMAIL_PASSWORD
 EMAIL_USE_TLS = True
 
 ACCOUNT_ACTIVATION_DAYS = 7
-CELERY_BROKER_URL = 'amqp://django:1234@localhost:5672/djangovhost'
+CELERY_BROKER_URL = 'amqp://localhost'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_TASK_ALWAYS_EAGER = False
+CELERY_TIMEZONE = 'Europe/Kiev'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGOUT_REDIRECT_URL = 'homepage'
+LOGIN_REDIRECT_URL = 'profile'
 
 
 

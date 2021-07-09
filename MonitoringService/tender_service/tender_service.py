@@ -1,4 +1,4 @@
-from templating.tender_service import constants
+from MonitoringService.tender_service import constants
 import requests
 
 

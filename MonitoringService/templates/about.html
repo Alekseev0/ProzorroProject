@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>About</h1>
+<p>
+    It`s a web-service, based on Prozorro.
+    This service gives you an ability to search for tenders by their hash.
+    Tenders have 3 status: Unsuccessful (Either tender hasn`t started yet, or it was cancelled), active and complete.
+    If you search for some tenders, they will be automatically added to your search history.
+    You may check your history in the profile.
+    If status of some of the tenders you have in your history changes, you get email about that.
+
+</p>
+{% endblock %

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitoring Service</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load static %}
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+</head>
+<body>
+
+{% load crispy_forms_tags %}
+<div class="myDiv">
+        <div class="container-fluid bg-white p-2 text-black-50 border">
+            <div class="row">
+
+                {% if user.is_authenticated %}
+
+                    <div class="col-1">
+                        <h3 class="text-left">
+                            <a href="{% url 'profile' %}" class="text-secondary">{{user}}</a>
+                        </h3>
+                    </div>
+
+                    <div class="col-1">
+                        <h3 class="text-left">
+                            <a href="{% url 'tender_search' %}" class="text-secondary">Search</a>
+                        </h3>
+                    </div>
+
+                    <div class="col">
+
+                        <h3 class="text-center">
+
+                            <a href="{% url 'homepage' %}" class="text-secondary">Homepage</a>
+                        </h3>
+                    </div>
+
+
+
+                    <div class="col-2">
+                        <h3 class="text-right">
+                            <a href="{% url 'logout' %}" class="text-secondary">logout</a>
+                        </h3>
+                    </div>
+                {% else %}
+
+                    <div class="col-1">
+                        <h3 class="text-left text-secondary">Guest</h3>
+                    </div>
+
+
+                    <div class="col-2">
+                        <h3 class="text-left">
+                            <a href="{% url 'tender_search' %}" class="text-secondary">Search</a>
+                        </h3>
+                    </div>
+
+
+                    <div class="col">
+                        <h3 class="text-center">
+                            <a href="{% url 'homepage' %}" class="text-secondary">Homepage</a>
+                        </h3>
+                    </div>
+
+                    <div class="col-2">
+                        <h3 class="text-right">
+                         <a href="{% url 'login' %}" class="text-secondary">Login</a>
+                        </h3>
+                    </div>
+
+                    <div class="col-1">
+                        <h3 class="text-right">
+                            <a href="{% url 'django_registration_register' %}" class="text-secondary">Registration</a>
+                        </h3>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+
+    <div class="container p-3 my-4 bg-white text-black-50 border">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</div>
+
+</body>
+</html>
