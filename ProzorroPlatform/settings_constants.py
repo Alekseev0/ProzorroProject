@@ -4,3 +4,5 @@ EMAIL_USER = ''
 DATABASE_USER = ''
 DATABASE_PASSWORD = ''
 
+#Your settings
+
