@@ -54,3 +54,16 @@ The last step is to click on generate and Gmail will generate a key or an app pa
 
 Then just add it to EMAIL_PASSWORD in settings_constants
 
+
+## 2. Database settings:
+
+https://www.2ndquadrant.com/en/blog/pginstaller-install-postgresql/ - an example of installing database. After it you need to add all settings into ProzorroPlatform/settings_constants.py(Name, user, password, host and port)
+
+## 3. Celery settings:
+
+For this project I used RabbitMQ as message broker. How to install it you can read here: https://www.rabbitmq.com/download.html
+If you want to use other message broker, you may read it: https://docs.celeryproject.org/en/stable/getting-started/first-steps-with-celery.html#celerytut-broker
+To choose your timezone you may use the next link: https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568
+
+
+
