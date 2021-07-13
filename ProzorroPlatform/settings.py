@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-from ProzorroPlatform.settings_constants import EMAIL_PASSWORD, DATABASE_PASSWORD, DATABASE_USER, EMAIL_USER
+from ProzorroPlatform.settings_constants import EMAIL_PASSWORD, DATABASE_PASSWORD, DATABASE_USER, EMAIL_USER, \
+    DATABASE_NAME, DATABASE_HOST, DATABASE_PORT
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -80,11 +81,11 @@ WSGI_APPLICATION = 'ProzorroPlatform.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
+        'NAME': DATABASE_NAME,
         'USER': DATABASE_USER,
         'PASSWORD': DATABASE_PASSWORD,
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': DATABASE_HOST,
+        'PORT': DATABASE_PORT,
     }
 }
 

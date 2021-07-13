@@ -1,8 +1,18 @@
+#Your settings
+
 EMAIL_PASSWORD = ''
 EMAIL_USER = ''
 
+
+
+DATABASE_NAME = ''
 DATABASE_USER = ''
 DATABASE_PASSWORD = ''
+DATABASE_HOST = #your host
+DATABASE_PORT = #your port
 
-#Your settings
+
+
+CELERY_TIMEZONE = ''
+
 
