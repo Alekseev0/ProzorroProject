@@ -714,6 +714,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-#settings of django
+#django settings
 ProzorroPlatform/mysettings_constants.py
 
