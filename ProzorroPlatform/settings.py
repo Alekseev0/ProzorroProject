@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from ProzorroPlatform.settings_constants import EMAIL_PASSWORD, DATABASE_PASSWORD, DATABASE_USER, EMAIL_USER, \
-    DATABASE_NAME, DATABASE_HOST, DATABASE_PORT
+    DATABASE_NAME, DATABASE_HOST, DATABASE_PORT, TIMEZONE
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -149,7 +149,7 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TASK_ALWAYS_EAGER = False
-CELERY_TIMEZONE = 'Europe/Kiev'
+CELERY_TIMEZONE = TIMEZONE
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
