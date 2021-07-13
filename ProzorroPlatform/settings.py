@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-from ProzorroPlatform.settings_constants import EMAIL_PASSWORD, DATABASE_PASSWORD, DATABASE_USER
+from ProzorroPlatform.settings_constants import EMAIL_PASSWORD, DATABASE_PASSWORD, DATABASE_USER, EMAIL_USER
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -138,7 +138,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'courseprojectdjango@gmail.com'
+EMAIL_HOST_USER = EMAIL_USER
 EMAIL_HOST_PASSWORD = EMAIL_PASSWORD
 EMAIL_USE_TLS = True
 
