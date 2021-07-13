@@ -67,7 +67,7 @@ For this project I used RabbitMQ as message broker. How to install it you can re
 If you want to use other message broker, you may read it: https://docs.celeryproject.org/en/stable/getting-started/first-steps-with-celery.html#celerytut-broker
 
 
-To choose your timezone you may use the next link: https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568
+To choose your timezone you may use the next link: https://gist.github.com/heyalexej/8bf688fd67d7199be4a1682b3eec7568. Then add it to CELERY_TIMEZONE in ProzorroPlatform/settings_constants.py
 
 
 
