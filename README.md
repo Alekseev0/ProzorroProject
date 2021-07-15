@@ -72,13 +72,13 @@ To choose your timezone you may use the next link: https://gist.github.com/heyal
 To start celery you shoul open Terminal and enter the next:
 
 
-  $ Celery -A ProzorroPlatform worker -l INFO
+'$ Celery -A ProzorroPlatform worker -l INFO'
 
 
 And this:
 
 
-  $ Celery -A ProzorroPlatform beat -l INFO
+  '$ Celery -A ProzorroPlatform beat -l INFO'
 
 
 If you use Windows, you should enter this:
