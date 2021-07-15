@@ -78,7 +78,7 @@ To start celery you shoul open Terminal and enter the next:
 And this:
 
 
-  '$ Celery -A ProzorroPlatform beat -l INFO'
+  ' Celery -A ProzorroPlatform beat -l INFO'
 
 
 If you use Windows, you should enter this:
