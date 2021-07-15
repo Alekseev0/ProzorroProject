@@ -90,6 +90,15 @@ If you use Windows, you should enter this:
 
 
 
+```
+if (isAwesome){
+  return true
+}
+```
+
+
+
+
 
 
 
