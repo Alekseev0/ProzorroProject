@@ -57,7 +57,11 @@ Then just add it to EMAIL_PASSWORD in settings_constants
 
 ## 2. Database settings:
 
-https://www.2ndquadrant.com/en/blog/pginstaller-install-postgresql/ - an example of installing database. After it you need to add all settings into ProzorroPlatform/settings_constants.py(Name, user, password, host and port)
+You may use SQLite, then you don`t need to change anything
+
+https://www.2ndquadrant.com/en/blog/pginstaller-install-postgresql/ - an example of installing PosgtreSQL. After it you need to add all settings into ProzorroPlatform/settings_constants.py(Name, user, password, host and port) and uncomment settings for PostgreSQL in settings.py
+
+
 
 ## 3. Celery settings:
 
