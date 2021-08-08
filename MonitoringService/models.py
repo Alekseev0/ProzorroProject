@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class Tender(models.Model):
-    #Main model of this project
+    """ Tender model """
     hash = models.TextField(unique=True)
     created_data = models.DateTimeField(auto_now=True)
     updated_data = models.DateTimeField(auto_now_add=True)
@@ -17,7 +17,7 @@ class Tender(models.Model):
 
 
 class SearchHistory(models.Model):
-    #Model used to display tenders that users added
+    """ Model used to save tenders, which were searched by user """
     user = models.OneToOneField(get_user_model(), on_delete=models.CASCADE)
     tender = models.ManyToManyField(Tender)
 

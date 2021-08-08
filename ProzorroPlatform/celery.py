@@ -17,7 +17,7 @@ app.autodiscover_tasks()
 @app.on_after_configure.connect
 def periodic_task(sender, **kwargs):
     sender.add_periodic_task(
-        crontab(minute=0, hour=0),
+        crontab(),
         check_tender
     )
 

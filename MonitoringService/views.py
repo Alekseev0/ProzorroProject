@@ -25,7 +25,8 @@ class TenderSearchView(TemplateView):
         return self.render_to_response(context)
 
     def _adding_tender_to_user_history(self, request, tender):
-        #Uses to create object of UserHistory model
+        """ Creating object of UserHistory model """
+
         if request.user.is_authenticated:
             try:
                 user_history, existing_user = SearchHistory.objects.get_or_create(user=request.user)
@@ -35,7 +36,10 @@ class TenderSearchView(TemplateView):
                 return tender
 
     def _saving_tender_and_history(self, request, tender):
-        #Saving tender to database and calling function _adding_tender_to_user_history
+        """
+        Saving tender to database and calling function _adding_tender_to_user_history
+        """
+
         if not tender:
             raise Http404
         try:
@@ -55,7 +59,8 @@ class TenderSearchView(TemplateView):
         return tender
     
     def post(self, request, *args, **kwargs):
-        #Gets tender from Prozorro by received from form hash
+        """ Search for tender by received hash  """
+
         tender_hash = request.POST.get('tender_hash')
         if not tender_hash:
             return HttpResponseBadRequest()
@@ -76,6 +81,8 @@ class TenderSearchView(TemplateView):
 
 
 class ProfileView(ListView):
+    """ View to template user`s profile """
+
     context_object_name = 'tenders'
     template_name = 'profile.html'
     paginate_by = 3

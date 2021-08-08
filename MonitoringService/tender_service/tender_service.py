@@ -5,6 +5,8 @@ import requests
 class ProzorroTenderService:
 
     def send_request(self, method, endpoint, headers=None, data=None, add_params=None):
+        """Sending a request to the Prozorro API"""
+
         headers = headers.copy() if headers else {}
         data = data.copy() if data else {}
         add_params = add_params.copy() if add_params else {}
