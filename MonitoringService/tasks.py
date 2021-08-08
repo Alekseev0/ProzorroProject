@@ -2,8 +2,9 @@ from celery import shared_task
 from django.core.mail import send_mail
 
 
-#Mail for the tenders,that are not complete yet
+
 def tender_changes_mail(username, tender_title, past_status, present_status, user_email):
+    """ Mail for the tenders,that are not complete yet """
     send_mail(
         'Tender monitoring service',
         f'Hello, {username} '
@@ -14,8 +15,9 @@ def tender_changes_mail(username, tender_title, past_status, present_status, use
         fail_silently=False
     )
 
-#Mail for the tenders,that are complete
+
 def tender_complete_mail(username, tender_title, status, user_email):
+    """ Mail for the tenders, which are complete"""
     send_mail(
         'Tender monitoring service',
         f'Hello, {username}. '
@@ -28,12 +30,18 @@ def tender_complete_mail(username, tender_title, status, user_email):
 
 @shared_task
 def check_tender():
+    """
+    Function which updates tender information
+    If tender is already complete, then it`s start and end dates will be NoneType, and we will get TypeError
+    """
+
+
     from MonitoringService.models import Tender, SearchHistory
     from datetime import datetime
     import pytz
     from MonitoringService.tender_service.tender_service import ProzorroTenderService
 
-    #Function which updates tender information
+
 
     tenders = Tender.objects.all()
     service = ProzorroTenderService()
@@ -60,7 +68,6 @@ def check_tender():
                 tender.save()
 
         except TypeError:
-            #If tender is already complete, then it`s start and end dates will be NoneType, and we will get TypeError
             if tender.last_status == 'complete' and tender.status_monitoring is True:
                 tender.status_monitoring = False
                 tender.save()
