@@ -15,8 +15,8 @@
 
 
             {% if tender.last_status != "complete" %}
-                <h5 class="text-center">Start date for receipt of tenders: {{tender.tender_start_date}}</h5>
-                <h5 class ="text-center">Time limit for receipt of tenders: {{tender.tender_end_date}}</h5>
+                <h5 class="text-center">Start date: {{tender.tender_start_date}}</h5>
+                <h5 class ="text-center">End date: {{tender.tender_end_date}}</h5>
             {% else %}
                 <h5 class="text-center">Tender is complete</h5>
 

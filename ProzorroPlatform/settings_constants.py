@@ -1,17 +1,17 @@
 """Type here your settings"""
 
-EMAIL_PASSWORD = ''
-EMAIL_USER = ''
+EMAIL_PASSWORD = 'iefcivxbulthuhcg'
+EMAIL_USER = 'myproj331@gmail.com'
 
 
 
 
 # Settings for PostgreSQL, if you want to use it
-DATABASE_NAME = ''
-DATABASE_USER = ''
-DATABASE_PASSWORD = ''
-DATABASE_HOST = ''
-DATABASE_PORT = ''
+DATABASE_NAME = 'postgres'
+DATABASE_USER = 'postgres'
+DATABASE_PASSWORD = 'Shadow0'
+DATABASE_HOST = 'localhost'
+DATABASE_PORT = '5432'
 
 
 

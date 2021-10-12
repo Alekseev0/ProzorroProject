@@ -5,7 +5,9 @@
 {% block content %}
 
 <h3 class="text-center">Registration is complete</h3>
-<h4 class="text-center">Login to continue your work</h4>
+<h4 class="text-center">
+    <a href="{% url 'login' %}" class="text-secondary">Login</a> to continue your work
+</h4>
 
 
 {% endblock %}
