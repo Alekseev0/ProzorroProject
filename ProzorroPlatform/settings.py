@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from ProzorroPlatform.settings_constants import EMAIL_PASSWORD, DATABASE_PASSWORD, DATABASE_USER, EMAIL_USER, \
@@ -172,6 +173,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGOUT_REDIRECT_URL = 'homepage'
 LOGIN_REDIRECT_URL = 'profile'
+
+django_heroku.settings(locals())
 
 
 
