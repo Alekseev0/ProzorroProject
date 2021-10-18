@@ -7,11 +7,11 @@ EMAIL_USER = ''
 
 
 # Settings for PostgreSQL, if you want to use it
-DATABASE_NAME = 'postgres'
-DATABASE_USER = 'postgres'
-DATABASE_PASSWORD = 'Shadow0'
-DATABASE_HOST = 'localhost'
-DATABASE_PORT = '5432'
+DATABASE_NAME = ''
+DATABASE_USER = ''
+DATABASE_PASSWORD = ''
+DATABASE_HOST = ''
+DATABASE_PORT = ''
 
 
 
