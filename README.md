@@ -65,7 +65,7 @@ https://www.2ndquadrant.com/en/blog/pginstaller-install-postgresql/ - an example
 
 ## 3. Celery settings:
 
-For this project I used RabbitMQ as message broker. How to install it you can read here: https://www.rabbitmq.com/download.html
+For this project I used redis as message broker. How to install it you can read here: https://redis.io/topics/quickstart
 
 
 If you want to use other message broker, you may read it: https://docs.celeryproject.org/en/stable/getting-started/first-steps-with-celery.html#celerytut-broker
