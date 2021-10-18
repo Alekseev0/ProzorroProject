@@ -1,7 +1,7 @@
 """Type here your settings"""
 
-EMAIL_PASSWORD = 'iefcivxbulthuhcg'
-EMAIL_USER = 'myproj331@gmail.com'
+EMAIL_PASSWORD = ''
+EMAIL_USER = ''
 
 
 
